@@ -57,7 +57,7 @@
 <body class="font-display bg-background-light dark:bg-background-dark">
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden text-dark-text dark:text-gray-200">
 <header class="sticky top-0 z-10 flex h-16 items-center border-b border-gray-200/80 bg-background-light/80 px-4 backdrop-blur-sm dark:border-gray-800/80 dark:bg-background-dark/80">
-<div class="flex items-center gap-2">
+<div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='../home.html'">
 <span class="material-symbols-outlined text-2xl text-dark-text dark:text-gray-200">arrow_back</span>
 <div class="flex items-center gap-2">
 <div class="relative h-7 w-7">
@@ -85,14 +85,14 @@
 <div class="mb-6 overflow-hidden rounded-xl bg-white shadow-sm dark:bg-gray-800/50">
 <h2 class="px-5 pt-4 text-base font-bold text-metro-purple dark:text-purple-400">My Metro</h2>
 <div class="flex flex-col">
-<a class="flex items-center gap-4 p-5 py-4 transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-gray-700/50" href="#">
+<a class="flex items-center gap-4 p-5 py-4 transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-gray-700/50" href="../Ticketing/journey-receipt.html">
 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-metro-purple/10 text-metro-purple dark:bg-purple-500/20 dark:text-purple-400">
 <span class="material-symbols-outlined text-2xl">history</span>
 </div>
 <p class="flex-1 truncate text-base font-medium text-dark-text dark:text-gray-200">Travel History</p>
 <span class="material-symbols-outlined text-xl text-gray-400">chevron_right</span>
 </a>
-<a class="flex items-center gap-4 p-5 py-4 transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-gray-700/50" href="#">
+<a class="flex items-center gap-4 p-5 py-4 transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-gray-700/50" href="wallet.html">
 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-metro-purple/10 text-metro-purple dark:bg-purple-500/20 dark:text-purple-400">
 <span class="material-symbols-outlined text-2xl">credit_card</span>
 </div>
@@ -118,49 +118,33 @@
 </div>
 <div class="border-t border-gray-200/80 dark:border-gray-700/80">
 <div class="flex items-center justify-between p-5 py-4">
-<div class="flex items-center gap-4">
+<div class="flex items-center gap-4 cursor-pointer" onclick="window.location.href='accessibility.html'">
 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-metro-green/10 text-metro-green dark:bg-green-500/20 dark:text-green-400">
 <span class="material-symbols-outlined text-2xl">accessibility_new</span>
 </div>
-<p class="flex-1 truncate text-base font-medium text-dark-text dark:text-gray-200">Large Text</p>
+<p class="flex-1 truncate text-base font-medium text-dark-text dark:text-gray-200">Accessibility Settings</p>
 </div>
-<label class="relative inline-flex cursor-pointer items-center">
-<input class="peer sr-only" type="checkbox"/>
-<div class="toggle-bg h-6 w-11 rounded-full bg-gray-200 peer-focus:ring-2 peer-focus:ring-green-300 dark:bg-gray-700"></div>
-<div class="dot absolute left-1 top-1 h-4 w-4 rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out dark:bg-gray-300"></div>
-</label>
+<span class="material-symbols-outlined text-xl text-gray-400">chevron_right</span>
 </div>
-<div class="flex items-center justify-between p-5 py-4 pt-3">
-<div class="flex items-center gap-4">
-<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-metro-green/10 text-metro-green dark:bg-green-500/20 dark:text-green-400">
-<span class="material-symbols-outlined text-2xl">contrast</span>
-</div>
-<p class="flex-1 truncate text-base font-medium text-dark-text dark:text-gray-200">High Contrast Mode</p>
-</div>
-<label class="relative inline-flex cursor-pointer items-center">
-<input checked="" class="peer sr-only" type="checkbox"/>
-<div class="toggle-bg h-6 w-11 rounded-full bg-gray-200 peer-focus:ring-2 peer-focus:ring-green-300 dark:bg-gray-700"></div>
-<div class="dot absolute left-1 top-1 h-4 w-4 rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out dark:bg-gray-300"></div>
-</label>
-</div>
+
 </div>
 </div>
 </div>
 <div class="mb-6 overflow-hidden rounded-xl bg-white shadow-sm dark:bg-gray-800/50">
 <h2 class="px-5 pt-4 text-base font-bold text-metro-purple dark:text-purple-400">Support</h2>
 <div class="flex flex-col">
-<a class="flex items-center gap-4 p-5 py-4 transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-gray-700/50" href="#">
+<a class="flex items-center gap-4 p-5 py-4 transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-gray-700/50" href="about.html">
 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-metro-purple/10 text-metro-purple dark:bg-purple-500/20 dark:text-purple-400">
 <span class="material-symbols-outlined text-2xl">help_outline</span>
 </div>
 <p class="flex-1 truncate text-base font-medium text-dark-text dark:text-gray-200">Help &amp; FAQ</p>
 <span class="material-symbols-outlined text-xl text-gray-400">chevron_right</span>
 </a>
-<a class="flex items-center gap-4 p-5 py-4 transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-gray-700/50" href="#">
+<a class="flex items-center gap-4 p-5 py-4 transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-gray-700/50" href="settings.html">
 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-metro-green/10 text-metro-green dark:bg-green-500/20 dark:text-green-400">
-<span class="material-symbols-outlined text-2xl">mail_outline</span>
+<span class="material-symbols-outlined text-2xl">settings</span>
 </div>
-<p class="flex-1 truncate text-base font-medium text-dark-text dark:text-gray-200">Contact Us</p>
+<p class="flex-1 truncate text-base font-medium text-dark-text dark:text-gray-200">App Settings</p>
 <span class="material-symbols-outlined text-xl text-gray-400">chevron_right</span>
 </a>
 </div>
