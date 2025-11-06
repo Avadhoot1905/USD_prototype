@@ -52,7 +52,7 @@
 <div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden">
 <!-- Top App Bar -->
 <div class="absolute top-0 left-0 right-0 z-20 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 pb-2 justify-between font-display">
-<button class="text-text-light-primary dark:text-dark-primary flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5">
+<button onclick="window.location.href='feeder-booking.html'" class="text-text-light-primary dark:text-dark-primary flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5">
 <span class="material-symbols-outlined text-2xl">arrow_back</span>
 </button>
 <h2 class="text-text-light-primary dark:text-dark-primary text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Live Tracking</h2>
@@ -131,8 +131,11 @@
 </button>
 </div>
 <!-- Action Button -->
-<div class="p-4 pt-2">
-<button class="flex w-full items-center justify-center rounded-xl h-14 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 text-base font-bold leading-normal tracking-[0.015em] hover:bg-red-200 dark:hover:bg-red-900/60">
+<div class="p-4 pt-2 space-y-2">
+<button onclick="window.location.href='receipt.html'" class="flex w-full items-center justify-center rounded-xl h-14 bg-secondary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-secondary/90">
+<span>Trip Completed - View Receipt</span>
+</button>
+<button onclick="window.location.href='feeder-booking.html'" class="flex w-full items-center justify-center rounded-xl h-14 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 text-base font-bold leading-normal tracking-[0.015em] hover:bg-red-200 dark:hover:bg-red-900/60">
 <span>Cancel Trip</span>
 </button>
 </div>
