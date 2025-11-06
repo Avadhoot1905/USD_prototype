@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Namma Metro - My Tickets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4B0082", // Changed from #5D3FD3
+              "secondary": "#009F4D", // Changed from #2E8B57
+              "background-light": "#F9F9F9",
+              "background-dark": "#121212",
+              "text-light": "#333333",
+              "text-dark": "#E0E0E0",
+              "subtle-light": "#E0E0E0",
+              "subtle-dark": "#333333",
+              "card-light": "#FFFFFF",
+              "card-dark": "#1E1E1E",
+              "subtle-text-light": "#666666",
+              "subtle-text-dark": "#AAAAAA",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="sticky top-0 z-10 flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<div class="flex items-center justify-center w-8 h-8">
+<svg aria-hidden="true" class="w-8 h-8" fill="none" role="img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.1511 26C12.1818 26 13.8182 24.2091 13.8182 22C13.8182 19.7909 12.1818 18 10.1511 18C8.12046 18 6.48401 19.7909 6.48401 22C6.48401 24.2091 8.12046 26 10.1511 26Z" stroke="#4B0082" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M21.8489 14C23.8795 14 25.5159 12.2091 25.5159 10C25.5159 7.79086 23.8795 6 21.8489 6C19.8182 6 18.1818 7.79086 18.1818 10C18.1818 12.2091 19.8182 14 21.8489 14Z" stroke="#009F4D" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M6.5 22C6.5 13.25 18 19 18.5 10" stroke="#4B0082" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+<div class="flex flex-col flex-1 text-center">
+<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">My Tickets</h2>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-medium">ನನ್ನ ಟಿಕೆಟ್‌ಗಳು</p>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-text-light dark:text-text-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</button>
+</div>
+</div>
+<div class="sticky top-[76px] z-10 bg-background-light dark:bg-background-dark px-4 pb-1">
+<div class="flex border-b border-subtle-light dark:border-subtle-dark justify-between">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Active</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-subtle-text-light dark:text-subtle-text-dark pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Upcoming</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-subtle-text-light dark:text-subtle-text-dark pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Expired</p>
+</a>
+</div>
+</div>
+<main class="flex-grow p-4 space-y-4">
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] bg-card-light dark:bg-card-dark">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-4 p-4">
+<div class="flex items-start justify-between gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal">Purple Line</p>
+</div>
+<p class="text-text-light dark:text-text-dark text-xl font-semibold leading-tight tracking-[-0.015em]">Majestic to Indiranagar</p>
+</div>
+<div class="flex items-center gap-1 text-subtle-text-light dark:text-subtle-text-dark">
+<span class="material-symbols-outlined text-base">offline_bolt</span>
+<p class="text-xs">Offline</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-subtle-text-light dark:text-subtle-text-dark">
+<span class="material-symbols-outlined text-xl text-primary">confirmation_number</span>
+<p class="text-base font-normal leading-normal">Single Journey Ticket</p>
+</div>
+<div class="flex items-center gap-2 text-subtle-text-light dark:text-subtle-text-dark">
+<span class="material-symbols-outlined text-xl text-primary">schedule</span>
+<p class="text-base font-normal leading-normal">Valid until 10:30 PM</p>
+</div>
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold leading-normal mt-2 gap-2 hover:bg-opacity-90 active:bg-opacity-80">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+<span class="truncate">Show QR Code</span>
+</button>
+</div>
+</div>
+</div>
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] bg-card-light dark:bg-card-dark">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-4 p-4">
+<div class="flex items-start justify-between gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal">Green Line</p>
+</div>
+<p class="text-text-light dark:text-text-dark text-xl font-semibold leading-tight tracking-[-0.015em]">Yelachenahalli to Peenya</p>
+</div>
+<div class="flex items-center gap-1 text-subtle-text-light dark:text-subtle-text-dark">
+<span class="material-symbols-outlined text-base">offline_bolt</span>
+<p class="text-xs">Offline</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-subtle-text-light dark:text-subtle-text-dark">
+<span class="material-symbols-outlined text-xl text-secondary">confirmation_number</span>
+<p class="text-base font-normal leading-normal">Return Journey Ticket</p>
+</div>
+<div class="flex items-center gap-2 text-subtle-text-light dark:text-subtle-text-dark">
+<span class="material-symbols-outlined text-xl text-secondary">schedule</span>
+<p class="text-base font-normal leading-normal">Expires in 2h 15m</p>
+</div>
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-secondary text-white text-base font-bold leading-normal mt-2 gap-2 hover:bg-opacity-90 active:bg-opacity-80">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+<span class="truncate">Show QR Code</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<div class="sticky bottom-0 z-10 flex gap-2 border-t border-subtle-light dark:border-subtle-dark bg-background-light dark:bg-background-dark px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-subtle-text-light dark:text-subtle-text-dark" href="#">
+<div class="flex h-8 items-center justify-center"><span class="material-symbols-outlined">home</span></div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-subtle-text-light dark:text-subtle-text-dark" href="#">
+<div class="flex h-8 items-center justify-center"><span class="material-symbols-outlined">explore</span></div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Journey</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary dark:text-primary" href="#">
+<div class="flex h-8 items-center justify-center"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">confirmation_number</span></div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Tickets</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-subtle-text-light dark:text-subtle-text-dark" href="#">
+<div class="flex h-8 items-center justify-center"><span class="material-symbols-outlined">person</span></div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Profile</p>
+</a>
+</div>
+</div>
+
+</body></html>

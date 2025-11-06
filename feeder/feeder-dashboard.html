@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Namma Yatra - Feeder Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6A0DAD",
+                        "secondary": "#008000",
+                        "background-light": "#F2F2F2",
+                        "background-dark": "#1c1022",
+                        "text-light": "#333333",
+                        "text-dark": "#F2F2F2",
+                        "text-muted-light": "#666666",
+                        "text-muted-dark": "#AAAAAA",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#2a1a35"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden max-w-md mx-auto">
+<!-- Top App Bar -->
+<header class="flex items-center bg-card-light dark:bg-card-dark px-4 pt-4 pb-2 justify-between shrink-0">
+<button class="flex size-10 items-center justify-center text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">Find a Ride</h1>
+<button class="flex w-auto items-center justify-end">
+<p class="text-primary dark:text-primary/90 text-base font-bold">ಕನ್ನಡ</p>
+</button>
+</header>
+<!-- Segmented Buttons -->
+<div class="flex px-4 py-3 bg-card-light dark:bg-card-dark">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-background-light dark:bg-background-dark p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-card-light has-[:checked]:dark:bg-card-dark has-[:checked]:shadow-sm has-[:checked]:text-text-light has-[:checked]:dark:text-text-dark text-text-muted-light dark:text-text-muted-dark text-sm font-medium">
+<span class="truncate">Map</span>
+<input checked="" class="invisible w-0" name="view-toggle" type="radio" value="Map"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-card-light has-[:checked]:dark:bg-card-dark has-[:checked]:shadow-sm has-[:checked]:text-text-light has-[:checked]:dark:text-text-dark text-text-muted-light dark:text-text-muted-dark text-sm font-medium">
+<span class="truncate">List</span>
+<input class="invisible w-0" name="view-toggle" type="radio" value="List"/>
+</label>
+</div>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 px-4 py-2 bg-card-light dark:bg-card-dark overflow-x-auto">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 text-primary dark:bg-primary/20 dark:text-white pl-3 pr-4 ring-1 ring-primary">
+<span class="material-symbols-outlined text-lg">apps</span>
+<p class="text-sm font-medium">All</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark pl-3 pr-4">
+<span class="material-symbols-outlined text-lg">two_wheeler</span>
+<p class="text-sm font-medium">Bike</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark pl-3 pr-4">
+<span class="material-symbols-outlined text-lg">electric_rickshaw</span>
+<p class="text-sm font-medium">Auto</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark pl-3 pr-4">
+<span class="material-symbols-outlined text-lg">local_taxi</span>
+<p class="text-sm font-medium">Cab</p>
+</div>
+</div>
+<!-- Main Content: Map and Bottom Sheet -->
+<main class="flex flex-1 flex-col overflow-hidden relative">
+<!-- Map -->
+<div class="absolute inset-0">
+<div class="bg-cover bg-center flex h-full w-full flex-col justify-between" data-alt="A stylized map of Bangalore showing streets and locations." data-location="Bangalore" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzXu8V6jTM6Ku1gvzBoKPu-OW39-llnb25aX_a7dRtd7nulvmT5JX0OC4fgUV7tdNvJgB5JQzcG9-ImIJffVX9xF2y2cm3o8gaxB8MKLnKbbUyWRCnczJfHrp04LiaM0LR1oH-neZPxxVSm57XT54gDjM6iMi_V-IxbjWvSxdm9gN9c5xv9Af2OAiSU_TjNTIFbUzQvn0DZb9ZbSpmnhM7mCFF5JBgzz9NqTlVPu0zeqqKT-5hWEmXoWBxeszyUpFMizE3fd58kg");'>
+<!-- Top Search Bar on Map -->
+<div class="p-4">
+<label class="flex flex-col w-full h-12 shadow-md">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-muted-light flex bg-card-light dark:bg-card-dark items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-card-light dark:bg-card-dark h-full placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark px-4 pl-2 text-base font-normal" placeholder="Enter destination"/>
+</div>
+</label>
+</div>
+<!-- Map Controls -->
+<div class="flex flex-col items-end gap-3 p-4">
+<div class="flex flex-col shadow-md rounded-lg">
+<button class="flex size-10 items-center justify-center rounded-t-lg bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">add</span>
+</button>
+<div class="h-px bg-background-light dark:bg-background-dark"></div>
+<button class="flex size-10 items-center justify-center rounded-b-lg bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<button class="flex size-10 items-center justify-center rounded-lg bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark shadow-md">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Sheet Card -->
+<div class="absolute bottom-0 left-0 right-0 p-3">
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-2xl p-4 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 rounded-full p-3">
+<span class="material-symbols-outlined text-primary text-3xl">electric_rickshaw</span>
+</div>
+<div>
+<h3 class="font-bold text-text-light dark:text-text-dark">Auto Ride</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">3 min away • 1.2 km</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-lg text-text-light dark:text-text-dark">₹50 - ₹65</p>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">Estimated Fare</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of the driver, a man smiling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqeJM9UeHxxDVtRGPoNXOy0N-I8vqhekfXUAQLS5C-m2rjFYCQUsk_F1YoFkocHyDoglud8W1_7SqY04AY5w9QSPhX802H6aUOomT6VTmme9njsaW_W29h11SnVfAUtx7Hf7o24Yer7PRhy6b3LwUwQaHtC-NuH_loqZoQFNwxGGtkEWzDkGBWlAnjde6JvrK606_rq8dzVg2ClJfJMW61iDhCEDTwTQx_fKuZ1a4A3MWu20Bj4lKpaeRGQxd6ny-QyeD-ocUgGA"/>
+<div>
+<p class="font-semibold text-text-light dark:text-text-dark">Rajesh Kumar</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-yellow-500 fill">star</span>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">4.8 (120 rides)</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary/90 transition-colors">Book Now</button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="flex gap-2 border-t border-background-light dark:border-background-dark bg-card-light dark:bg-card-dark px-4 pb-3 pt-2 shrink-0">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-muted-light dark:text-text-muted-dark" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-muted-light dark:text-text-muted-dark" href="#">
+<span class="material-symbols-outlined">map</span>
+<p class="text-xs font-medium">Plan Journey</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary dark:text-white" href="#">
+<div class="flex h-8 w-16 items-center justify-center bg-primary/10 dark:bg-primary/30 rounded-full">
+<span class="material-symbols-outlined fill">local_taxi</span>
+</div>
+<p class="text-xs font-bold">Rides</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-muted-light dark:text-text-muted-dark" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</footer>
+</div>
+</body></html>

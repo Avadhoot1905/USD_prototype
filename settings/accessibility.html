@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Namma Yatra - Accessibility Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#6A0DAD",
+              "secondary": "#008000",
+              "background-light": "#f7f6f8",
+              "background-dark": "#1C1C1E",
+              "text-light": "#1C1C1E",
+              "text-dark": "#FFFFFF",
+              "subtle-light": "#F2F2F7",
+              "subtle-dark": "#2c2c2e"
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .group:has([type=checkbox]:checked) .preview-title { font-size: 1.5rem; line-height: 2rem; }
+        .group:has([type=checkbox]:checked) .preview-body { font-size: 1.125rem; line-height: 1.75rem; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-white dark:bg-subtle-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-subtle-light dark:border-gray-700">
+<div class="text-text-light dark:text-text-dark flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Accessibility</h2>
+</div>
+<div class="p-4 space-y-4">
+<!-- Accessibility Options -->
+<div class="flex items-center gap-4 bg-white dark:bg-subtle-dark px-4 min-h-[72px] py-3 justify-between rounded-xl">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl">text_fields</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">Large Text / ದೊಡ್ಡ ಪಠ್ಯ</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Increases the font size for better readability.</p>
+</div>
+</div>
+<div class="shrink-0 group">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-subtle-light dark:bg-gray-600 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-subtle-dark px-4 min-h-[72px] py-3 justify-between rounded-xl">
+<div class="flex items-center gap-4">
+<div class="text-secondary flex items-center justify-center rounded-lg bg-secondary/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl">contrast</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal line-clamp-1">High Contrast / ಹೆಚ್ಚಿನ ಕಾಂಟ್ರಾಸ್ಟ್</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Uses a darker background with lighter text.</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-subtle-light dark:bg-gray-600 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-secondary">
+<div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Section Header for Preview -->
+<div class="px-4 pb-2 pt-4">
+<h3 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Preview / ಮುನ್ನೋಟ</h3>
+</div>
+<!-- Live Preview Card -->
+<div class="px-4">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-subtle-dark p-4">
+<div class="flex w-full flex-col items-stretch justify-center gap-2">
+<p class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] preview-title transition-all">Bengaluru Metro / ಬೆಂಗಳೂರು ಮೆಟ್ರೋ</p>
+<div class="flex flex-col gap-1">
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal preview-body transition-all">The quick brown fox jumps over the lazy dog. This is how text will appear in the app.</p>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal preview-body transition-all">ತ್ವರಿತ ಕಂದು ನರಿ ಸೋಮಾರಿಯಾದ ನಾಯಿಯ ಮೇಲೆ ಜಿಗಿಯುತ್ತದೆ.</p>
+</div>
+<div class="pt-2">
+<button class="w-full rounded-lg bg-primary/20 dark:bg-primary/30 px-4 py-2 text-primary dark:text-gray-200 opacity-60 cursor-not-allowed">
+                        Sample Button
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

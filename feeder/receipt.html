@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trip Receipt - Namma Yatra</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6C2B88",
+                        "secondary": "#2E9348",
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#121212",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E1E1E",
+                        "text-primary-light": "#343A40",
+                        "text-primary-dark": "#E0E0E0",
+                        "text-secondary-light": "#6C757D",
+                        "text-secondary-dark": "#A9A9A9"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<!-- Top App Bar -->
+<div class="flex items-center bg-card-light dark:bg-card-dark p-4 shadow-sm sticky top-0 z-10">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5">
+<span class="material-symbols-outlined text-text-primary-light dark:text-text-primary-dark text-2xl">arrow_back</span>
+</button>
+<div class="flex flex-col flex-1 text-center">
+<h1 class="text-lg font-bold leading-tight tracking-tight">Trip Receipt</h1>
+<h2 class="text-sm text-text-secondary-light dark:text-text-secondary-dark font-medium">ಪ್ರಯಾಣದ ರಶೀದಿ</h2>
+</div>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5">
+<span class="material-symbols-outlined text-text-primary-light dark:text-text-primary-dark text-2xl">contrast</span>
+</button>
+</div>
+<main class="flex-1 p-4 space-y-6">
+<!-- Journey Details Card -->
+<div class="bg-card-light dark:bg-card-dark p-5 rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 shrink-0 size-14">
+<span class="material-symbols-outlined text-primary text-3xl">train</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-primary"></div>
+<p class="text-lg font-bold">Majestic</p>
+</div>
+<div class="border-l-2 border-dashed border-text-secondary-light/50 dark:border-text-secondary-dark/50 h-5 ml-[5px] my-1"></div>
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-secondary"></div>
+<p class="text-lg font-bold">Indiranagar</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-3xl font-bold">₹35.00</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">14 Nov 2023, 10:30 AM</p>
+</div>
+</div>
+</div>
+<!-- Fare Breakdown Card -->
+<div class="bg-card-light dark:bg-card-dark p-5 rounded-xl shadow-sm">
+<h3 class="text-base font-bold text-text-primary-light dark:text-text-primary-dark mb-3">Fare Details / ಶುಲ್ಕದ ವಿವರಗಳು</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-sm">
+<p class="text-text-secondary-light dark:text-text-secondary-dark">Base Fare</p>
+<p class="font-medium">₹32.00</p>
+</div>
+<div class="flex justify-between items-center text-sm">
+<p class="text-text-secondary-light dark:text-text-secondary-dark">Taxes &amp; Fees</p>
+<p class="font-medium">₹3.00</p>
+</div>
+<div class="border-t border-dashed border-gray-200 dark:border-gray-700 my-3"></div>
+<div class="flex justify-between items-center text-base">
+<p class="font-bold">Total Paid</p>
+<p class="font-bold text-lg">₹35.00</p>
+</div>
+</div>
+</div>
+<!-- Payment Details Card -->
+<div class="bg-card-light dark:bg-card-dark p-5 rounded-xl shadow-sm">
+<h3 class="text-base font-bold text-text-primary-light dark:text-text-primary-dark mb-4">Payment Method / ಪಾವತಿ ವಿಧಾನ</h3>
+<div class="flex items-start gap-4 mb-4">
+<div class="flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 shrink-0 size-12">
+<img class="h-6" data-alt="UPI Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrZWPfnaazHwqv2rjwN4-bXtBSXF0s97SaK0PCFmqWaA7Njv5h9PEd0D5OdzRimf__6RLbeqWEEGMX462RGlN9QTNUqrikzqALjurnh5BV6ZbTHRKbw-9jHn3co6pJRt_CUqJNUjZiDdqoVpL4wsor1Cg2H45tnQNjbU-I_l28hC0hEKpZheaAGAvCfZJpIPVVF2OQYOBdg3lyIXPhKjF6J6usIgok6oXSbsr4AygwoE3SMTsUTOCEmebnfFFHMPfOnxM6PpJGAA"/>
+</div>
+<div class="flex-1">
+<p class="font-medium">Paid with UPI</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">username@bank</p>
+</div>
+</div>
+<div class="text-sm">
+<p class="text-text-secondary-light dark:text-text-secondary-dark">Transaction ID</p>
+<p class="font-mono text-xs tracking-wide">T2311141030A9B8C7D6E5F4</p>
+</div>
+</div>
+</main>
+<!-- Action Buttons -->
+<div class="sticky bottom-0 bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-sm p-4 mt-auto border-t border-gray-200 dark:border-gray-700">
+<div class="grid grid-cols-2 gap-4">
+<button class="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full h-12 bg-primary/10 dark:bg-primary/20 text-primary text-base font-bold leading-normal tracking-wide transition-colors hover:bg-primary/20 dark:hover:bg-primary/30">
+<span class="material-symbols-outlined">download</span>
+<span>Download</span>
+</button>
+<button class="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full h-12 bg-primary text-white text-base font-bold leading-normal tracking-wide transition-colors hover:bg-primary/90">
+<span class="material-symbols-outlined">share</span>
+<span>Share</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

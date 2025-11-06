@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Namma Yatra - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#5A2E8E", /* Metro Purple */
+              "secondary": "#008064", /* Metro Green */
+              "background-light": "#f7f6f8",
+              "background-dark": "#1C1022",
+              "card-light": "#ffffff",
+              "card-dark": "#2a1a33",
+              "text-light": "#333333",
+              "text-dark": "#e0e0e0",
+              "subtext-light": "#666666",
+              "subtext-dark": "#a0a0a0",
+              "border-light": "#e5e7eb",
+              "border-dark": "#3a2a43",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col overflow-x-hidden text-text-light dark:text-text-dark">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex shrink-0 items-center justify-between bg-card-light/80 p-4 backdrop-blur-sm dark:bg-card-dark/80">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+<h1 class="flex-1 text-center text-lg font-bold leading-tight tracking-[-0.015em]">Settings</h1>
+<div class="w-6"></div>
+</header>
+<main class="flex-1 space-y-6 p-4">
+<!-- General Section -->
+<div class="space-y-2">
+<h2 class="px-2 text-sm font-bold uppercase text-subtext-light dark:text-subtext-dark">General</h2>
+<div class="overflow-hidden rounded-xl bg-card-light dark:bg-card-dark">
+<div class="flex items-center justify-between gap-4 px-4 py-3">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">language</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal">Language</p>
+</div>
+<div class="shrink-0">
+<div class="flex items-center rounded-lg bg-background-light p-1 dark:bg-background-dark">
+<button class="rounded-md bg-card-light px-3 py-1 text-sm font-medium text-primary shadow-sm dark:bg-card-dark">English</button>
+<button class="rounded-md px-3 py-1 text-sm font-medium text-subtext-light dark:text-subtext-dark">ಕನ್ನಡ</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notifications Section -->
+<div class="space-y-2">
+<h2 class="px-2 text-sm font-bold uppercase text-subtext-light dark:text-subtext-dark">Notifications</h2>
+<div class="divide-y divide-border-light overflow-hidden rounded-xl bg-card-light dark:divide-border-dark dark:bg-card-dark">
+<div class="flex items-center justify-between gap-4 px-4 py-3 min-h-14">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal">Station arrival alerts</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light p-0.5 has-[:checked]:bg-primary dark:bg-background-dark">
+<div class="h-full w-[27px] transform rounded-full bg-white transition-transform duration-200" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;"></div>
+<input checked="" class="peer invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex items-center justify-between gap-4 px-4 py-3 min-h-14">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">error</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal">Service disruption updates</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light p-0.5 has-[:checked]:bg-primary dark:bg-background-dark">
+<div class="h-full w-[27px] transform rounded-full bg-white transition-transform duration-200" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;"></div>
+<input checked="" class="peer invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex items-center justify-between gap-4 px-4 py-3 min-h-14">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">sell</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal">Promotional offers</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light p-0.5 has-[:checked]:bg-primary dark:bg-background-dark">
+<div class="h-full w-[27px] transform rounded-full bg-white transition-transform duration-200" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;"></div>
+<input class="peer invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Accessibility Section -->
+<div class="space-y-2">
+<h2 class="px-2 text-sm font-bold uppercase text-subtext-light dark:text-subtext-dark">Accessibility</h2>
+<div class="divide-y divide-border-light overflow-hidden rounded-xl bg-card-light dark:divide-border-dark dark:bg-card-dark">
+<div class="flex items-center justify-between gap-4 px-4 py-3 min-h-14">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-2xl">format_size</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal">Large Text</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light p-0.5 has-[:checked]:bg-secondary dark:bg-background-dark">
+<div class="h-full w-[27px] transform rounded-full bg-white transition-transform duration-200" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;"></div>
+<input class="peer invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex items-center justify-between gap-4 px-4 py-3 min-h-14">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-2xl">contrast</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal">High Contrast Mode</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light p-0.5 has-[:checked]:bg-secondary dark:bg-background-dark">
+<div class="h-full w-[27px] transform rounded-full bg-white transition-transform duration-200" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;"></div>
+<input class="peer invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Legal & Support Section -->
+<div class="space-y-2">
+<h2 class="px-2 text-sm font-bold uppercase text-subtext-light dark:text-subtext-dark">Legal &amp; Support</h2>
+<div class="divide-y divide-border-light overflow-hidden rounded-xl bg-card-light dark:divide-border-dark dark:bg-card-dark">
+<a class="flex items-center justify-between gap-4 px-4 py-3 min-h-14" href="#">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-background-light dark:bg-background-dark">
+<span class="material-symbols-outlined text-2xl text-subtext-light dark:text-subtext-dark">shield</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal">Privacy Policy</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-xl text-subtext-light dark:text-subtext-dark">chevron_right</span>
+</div>
+</a>
+<a class="flex items-center justify-between gap-4 px-4 py-3 min-h-14" href="#">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-background-light dark:bg-background-dark">
+<span class="material-symbols-outlined text-2xl text-subtext-light dark:text-subtext-dark">gavel</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal">Terms of Service</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-xl text-subtext-light dark:text-subtext-dark">chevron_right</span>
+</div>
+</a>
+<a class="flex items-center justify-between gap-4 px-4 py-3 min-h-14" href="#">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-background-light dark:bg-background-dark">
+<span class="material-symbols-outlined text-2xl text-subtext-light dark:text-subtext-dark">help_outline</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal">Help &amp; Feedback</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-xl text-subtext-light dark:text-subtext-dark">chevron_right</span>
+</div>
+</a>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Namma Metro - Live Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4B0082",
+              "secondary": "#009F4D",
+              "background-light": "#F8F9FA",
+              "background-dark": "#1A111F",
+              "text-light": "#212529",
+              "text-dark": "#F5F0F8",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden">
+<header class="absolute top-0 left-0 right-0 z-20 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 pb-2 justify-between h-16">
+<div class="flex items-center gap-2">
+<div class="flex h-7 w-7 flex-col justify-between">
+<div class="h-1.5 w-full rounded-full bg-primary"></div>
+<div class="h-1.5 w-full rounded-full bg-secondary"></div>
+</div>
+<h1 class="text-text-light dark:text-text-dark text-xl font-bold leading-tight tracking-[-0.015em] flex-1">Namma Metro</h1>
+</div>
+<div class="flex items-center justify-end">
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 bg-text-light/10 dark:bg-text-dark/10 text-text-light dark:text-text-dark gap-2 text-sm font-medium leading-normal min-w-0 px-3">
+<span class="material-symbols-outlined text-base">wifi_off</span>
+<span>Offline Mode</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col relative">
+<div class="absolute inset-0 flex flex-col h-full w-full">
+<div class="flex-1 bg-cover bg-center" data-alt="Stylized map of Bangalore showing Purple and Green metro lines with live train markers." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDGX3QgSh0zWCsaaB13uPtnTA20rTl9Dy81mYNTp-suFGfhABZ5v1Rvz_tZeGiQ9JmJ9t8ENjLcXBqwf0U9Lg3fuB1E5DQxtbSB8Kfd1ThB5acUX_HgBDfTqN2B3lQAnmEKJJtLIqb_x2o9uG8zEouZnLtqPuBjB5jbDYpyCKdPtsb5oN0aDM56MFR2uFf3A41du_71VkRmPv88IafaV3pO_WWWIRlo-M0Ejnntwoqz6xklaIyA_O1W2Bwn6_dBO6iCevrXdW6tw");'>
+<div class="absolute top-0 left-0 h-28 w-full bg-gradient-to-t from-transparent to-secondary/20 dark:to-secondary/30 pointer-events-none"></div>
+<div class="absolute top-20 left-4 right-4 z-10">
+<label class="flex flex-col min-w-40 h-12 shadow-lg">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-light/60 dark:text-text-dark/60 flex border-none bg-background-light dark:bg-background-dark items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-background-light dark:bg-background-dark focus:border-none h-full placeholder:text-text-light/60 dark:placeholder:text-text-dark/60 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search for a station..." value=""/>
+</div>
+</label>
+</div>
+<div class="absolute bottom-24 right-4 flex flex-col items-end gap-3 z-10">
+<div class="flex flex-col gap-0.5">
+<button class="flex size-10 items-center justify-center rounded-t-lg bg-background-light dark:bg-background-dark shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-b-lg bg-background-light dark:bg-background-dark shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<button class="flex size-12 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 h-full w-full flex flex-col justify-end items-stretch pointer-events-none">
+<div class="flex flex-col items-stretch bg-background-light dark:bg-background-dark rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.1)] pointer-events-auto max-h-[75vh] min-h-[320px]">
+<button class="flex h-5 w-full items-center justify-center flex-shrink-0 pt-3">
+<div class="h-1 w-9 rounded-full bg-text-light/20 dark:bg-text-dark/20"></div>
+</button>
+<div class="flex-grow overflow-y-auto px-4 pb-4">
+<h2 class="text-text-light dark:text-text-dark tracking-light text-[28px] font-bold leading-tight text-left pb-1 pt-3">Majestic</h2>
+<h3 class="text-text-light/70 dark:text-text-dark/70 text-lg font-medium pb-4">ಮೆಜೆಸ್ಟಿಕ್</h3>
+<div class="space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<div class="w-2 h-6 rounded-full" style="background-color: #4B0082;"></div>
+<h4 class="text-xl font-semibold text-text-light dark:text-text-dark">Purple Line</h4>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center bg-background-light dark:bg-background-dark p-3 rounded-lg border border-text-light/10 dark:border-text-dark/10">
+<div class="flex flex-col">
+<span class="text-base font-medium text-text-light dark:text-text-dark">Towards Whitefield</span>
+<span class="text-sm text-text-light/60 dark:text-text-dark/60">ವೈಟ್‌ಫೀಲ್ಡ್ ಕಡೆಗೆ</span>
+</div>
+<span class="text-lg font-bold text-primary">2 min</span>
+</div>
+<div class="flex justify-between items-center bg-background-light dark:bg-background-dark p-3 rounded-lg border border-text-light/10 dark:border-text-dark/10">
+<div class="flex flex-col">
+<span class="text-base font-medium text-text-light dark:text-text-dark">Towards Challaghatta</span>
+<span class="text-sm text-text-light/60 dark:text-text-dark/60">ಚಲ್ಲಘಟ್ಟ ಕಡೆಗೆ</span>
+</div>
+<span class="text-lg font-bold text-primary">5 min</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-3">
+<div class="w-2 h-6 rounded-full" style="background-color: #009F4D;"></div>
+<h4 class="text-xl font-semibold text-text-light dark:text-text-dark">Green Line</h4>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center bg-background-light dark:bg-background-dark p-3 rounded-lg border border-text-light/10 dark:border-text-dark/10">
+<div class="flex flex-col">
+<span class="text-base font-medium text-text-light dark:text-text-dark">Towards Nagasandra</span>
+<span class="text-sm text-text-light/60 dark:text-text-dark/60">ನಾಗಸಂದ್ರ ಕಡೆಗೆ</span>
+</div>
+<span class="text-lg font-bold text-secondary">4 min</span>
+</div>
+<div class="flex justify-between items-center bg-background-light dark:bg-background-dark p-3 rounded-lg border border-text-light/10 dark:border-text-dark/10">
+<div class="flex flex-col">
+<span class="text-base font-medium text-text-light dark:text-text-dark">Towards Silk Institute</span>
+<span class="text-sm text-text-light/60 dark:text-text-dark/60">ರೇಷ್ಮೆ ಸಂಸ್ಥೆ ಕಡೆಗೆ</span>
+</div>
+<span class="text-lg font-bold text-secondary">7 min</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

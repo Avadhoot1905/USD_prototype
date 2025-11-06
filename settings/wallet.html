@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Namma Yatra - My Wallet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#6A00A8",
+              "metro-green": "#008000",
+              "text-debit": "#D32F2F",
+              "background-light": "#F8F9FA",
+              "background-dark": "#121212",
+              "card-light": "#FFFFFF",
+              "card-dark": "#1E1E1E",
+              "text-primary-light": "#333333",
+              "text-primary-dark": "#E0E0E0",
+              "text-secondary-light": "#6c757d",
+              "text-secondary-dark": "#B0B0B0",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-card-light dark:bg-card-dark p-4 pb-3 justify-between sticky top-0 z-10 shadow-sm">
+<div class="flex size-10 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-text-primary-light dark:text-text-primary-dark">arrow_back</span>
+</div>
+<h1 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">My Wallet / ನನ್ನ ವಾಲೆಟ್</h1>
+<div class="flex w-10 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-transparent text-text-primary-light dark:text-text-primary-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-text-primary-light dark:text-text-primary-dark">accessibility_new</span>
+</button>
+</div>
+</div>
+<!-- Main Content -->
+<main class="p-4 flex flex-col gap-6">
+<!-- Balance Card -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-card-light dark:bg-card-dark p-6">
+<div class="flex flex-col items-start gap-1">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium leading-normal">Current Balance</p>
+<p class="text-text-primary-light dark:text-text-primary-dark text-4xl font-extrabold leading-tight tracking-[-0.02em]">₹ 250.50</p>
+</div>
+<div class="flex items-center justify-end pt-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full h-11 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-wide">
+<span class="material-symbols-outlined text-base">add_card</span>
+<span class="truncate">Add Money</span>
+</button>
+</div>
+</div>
+<!-- Recent Activity Section -->
+<div>
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-1 pb-3 pt-2">Recent Activity</h2>
+<div class="flex flex-col gap-3">
+<!-- List Item: Wallet Top-up -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark p-4 min-h-[72px] justify-between rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+<div class="flex items-center gap-4">
+<div class="text-metro-green flex items-center justify-center rounded-full bg-metro-green/10 shrink-0 size-12">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Wallet Top-up</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">October 26, 10:45 AM</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-metro-green text-base font-semibold leading-normal">+ ₹ 200.00</p></div>
+</div>
+<!-- List Item: Ticket Purchase -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark p-4 min-h-[72px] justify-between rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-full bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">confirmation_number</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Ticket Purchase</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">October 25, 08:30 AM</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-text-debit text-base font-semibold leading-normal">- ₹ 50.00</p></div>
+</div>
+<!-- List Item: Journey Fare -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark p-4 min-h-[72px] justify-between rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-full bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">subway</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Journey Fare</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">October 24, 09:12 PM</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-text-debit text-base font-semibold leading-normal">- ₹ 35.50</p></div>
+</div>
+<!-- List Item: Refund -->
+<div class="flex items-center gap-4 bg-card-light dark:bg-card-dark p-4 min-h-[72px] justify-between rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+<div class="flex items-center gap-4">
+<div class="text-metro-green flex items-center justify-center rounded-full bg-metro-green/10 shrink-0 size-12">
+<span class="material-symbols-outlined">assignment_return</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Refund Processed</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">October 23, 01:15 PM</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-metro-green text-base font-semibold leading-normal">+ ₹ 10.00</p></div>
+</div>
+</div>
+</div>
+<!-- Empty State -->
+<div class="flex flex-col items-center justify-center text-center py-10 px-4 mt-4 hidden">
+<div class="flex items-center justify-center size-24 rounded-full bg-primary/10 text-primary mb-6">
+<span class="material-symbols-outlined !text-5xl">history</span>
+</div>
+<h3 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold mb-2">No Transactions Yet</h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark max-w-xs">Your recent wallet activity will appear here once you start using your Namma Yatra wallet.</p>
+</div>
+</main>
+</div>
+</body></html>

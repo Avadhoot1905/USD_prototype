@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Namma Yatra - Booking Confirmed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#5D3FD3", /* Using the requested purple */
+              "background-light": "#f7f6f8",
+              "background-dark": "#1c1022",
+              "accent-green": "#228B22",
+              "text-light": "#333333",
+              "text-dark": "#E0E0E0",
+              "subtle-light": "#E0E0E0",
+              "subtle-dark": "#3a2d42"
+            },
+            fontFamily: {
+              "display": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col text-text-light dark:text-text-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-accent-green flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Booking Confirmed!</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-subtle-light dark:bg-subtle-dark p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+<p class="text-xs font-medium">ಕನ್ನಡ</p>
+</div>
+</div>
+<!-- Map -->
+<div class="flex px-4 py-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl object-cover shadow-sm" data-alt="A map showing the driver's route to the pickup location in Bangalore." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMMaob1J6zF9-B0G6Vf933oAgPLpOAvNiGpUr-mLg0vVuFEnFKrw3DtjQuDH54_AqxupLgnJIcv22Ugu7f-M5QtavTK4TfztrrIphlcupBnsSWZOlUA5nvBIkMoF7F3F5ZeJpC1OKKA02-DAVJBA6c61P5aSyazuOvr-kXUvwvjiKpSvfJhYrUajcAzbPFb3TlPghagsn0yR7ctR7USXXXqCJ9okbf_NnYglYFhw6s81uB5vaYEMXwN04eGVMojTzMDJH8zeOL7A");'></div>
+</div>
+<!-- Driver & Vehicle Card -->
+<div class="px-4 py-2 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 p-4">
+<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full mr-4 shrink-0" data-alt="A friendly portrait of the driver, Raghavendra U." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdRGQBY480w_oMrW4kzrvnxRCzShWXLsYixavIg2NQqDiBQ050lKetL8Vsd564ODsj2OXNdbNDVapTvVsYoWDb9RpqhzsMj-jnlMu8zVceP9NGtQbzNmloL5Mkvf3oTnZz-rQbB7xBkrbQ5gngxdqx4JC9OPRmIhj7IRgbOOvPa7Fq7UbYEkGEQ6vm-t3Xh4rPm9iLC3_OH-uKCK_Guk8Is06IEwXfDfQ0F4mDUrNEext42srGZuKYkCwVHDnokYPD92DkUdq8sQ");'></div>
+<div class="flex w-full min-w-0 grow flex-col items-stretch justify-center gap-1">
+<p class="text-accent-green text-sm font-medium leading-normal">Arriving in 5 mins</p>
+<p class="text-text-light dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Raghavendra U</p>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mt-1">
+<div class="flex flex-col gap-1">
+<p class="text-text-light/80 dark:text-text-dark/80 text-base font-normal leading-normal">Toyota Glanza - KA 05 N 1234</p>
+<p class="text-text-light/80 dark:text-text-dark/80 text-base font-normal leading-normal">OTP: <span class="font-bold text-primary">4521</span></p>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-center">
+<button class="flex items-center justify-center size-12 rounded-full bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined">call</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Ride Details Card -->
+<div class="px-4 py-2">
+<div class="rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-background-dark/50 p-4 divide-y divide-subtle-light dark:divide-subtle-dark">
+<div class="flex justify-between items-start gap-x-6 py-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">trip_origin</span>
+<p class="text-text-light/80 dark:text-text-dark/80 text-sm font-normal leading-normal">From</p>
+</div>
+<p class="text-sm font-medium leading-normal text-right">123, Koramangala 4th Block</p>
+</div>
+<div class="flex justify-between items-start gap-x-6 py-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-green text-xl">location_on</span>
+<p class="text-text-light/80 dark:text-text-dark/80 text-sm font-normal leading-normal">To</p>
+</div>
+<p class="text-sm font-medium leading-normal text-right">Indiranagar Metro Station</p>
+</div>
+<div class="flex justify-between items-center gap-x-6 py-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-light/80 dark:text-text-dark/80 text-xl">payments</span>
+<p class="text-text-light/80 dark:text-text-dark/80 text-sm font-normal leading-normal">Total Fare</p>
+</div>
+<p class="text-sm font-bold leading-normal text-right">₹85.00</p>
+</div>
+</div>
+</div>
+<!-- Cancel Button -->
+<div class="p-4 mt-auto">
+<button class="w-full text-center py-3 rounded-lg text-red-500 bg-red-500/10 font-semibold transition-colors hover:bg-red-500/20">
+                Cancel Ride
+            </button>
+</div>
+</div>
+</body></html>

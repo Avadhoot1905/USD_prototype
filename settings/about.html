@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Namma Yatra - About &amp; Terms</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#6A00A8", // Metro Purple
+              "secondary": "#008000", // Metro Green
+              "background-light": "#f7f6f8",
+              "background-dark": "#1c1022",
+              "text-light": "#333333",
+              "text-dark": "#e0e0e0",
+              "text-muted-light": "#7c6189",
+              "text-muted-dark": "#a19da3"
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200 dark:border-gray-700">
+<div class="flex size-12 shrink-0 items-center justify-start text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center text-text-light dark:text-text-dark">About &amp; Terms</h2>
+<div class="w-12 shrink-0"></div> <!-- Spacer -->
+</div>
+<div class="flex flex-col items-center justify-center p-4">
+<!-- App Logo & Name -->
+<div class="flex items-center justify-center gap-3 pt-6 pb-2">
+<div class="flex size-16 shrink-0 items-center justify-center rounded-xl bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-4xl text-primary dark:text-purple-300">tram</span>
+</div>
+<h1 class="text-text-light dark:text-text-dark tracking-light text-[32px] font-bold leading-tight">Namma Yatra</h1>
+</div>
+<!-- App Description -->
+<p class="text-text-light dark:text-text-dark text-base font-normal leading-normal pb-3 text-center max-w-md">
+            Your modern, bilingual companion for navigating the Bangalore Metro. Designed for usability and accessibility.
+        </p>
+<!-- Version Info -->
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal pb-6 text-center">Version 1.0.0</p>
+</div>
+<div class="w-full grow px-4 space-y-4 pb-8">
+<!-- Card -->
+<div class="w-full overflow-hidden rounded-xl bg-white dark:bg-gray-800/50 shadow-sm">
+<!-- Acknowledgements Section -->
+<div class="flex items-start gap-4 p-4 border-b border-gray-200 dark:border-gray-700">
+<span class="material-symbols-outlined text-primary dark:text-purple-300 mt-1">info</span>
+<div class="flex-1">
+<h3 class="font-bold text-text-light dark:text-text-dark">Acknowledgements</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark pt-1">This is an independent project. All metro data is provided by Bangalore Metro Rail Corporation Limited (BMRCL).</p>
+</div>
+</div>
+<!-- Legal Section -->
+<div class="flex flex-col">
+<button class="flex w-full items-center justify-between p-4 text-left border-b border-gray-200 dark:border-gray-700">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-purple-300">description</span>
+<span class="font-medium text-text-light dark:text-text-dark">Terms &amp; Conditions</span>
+</div>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+</button>
+<button class="flex w-full items-center justify-between p-4 text-left">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-purple-300">privacy_tip</span>
+<span class="font-medium text-text-light dark:text-text-dark">Privacy Policy</span>
+</div>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Accessibility Card -->
+<div class="w-full overflow-hidden rounded-xl bg-white dark:bg-gray-800/50 shadow-sm">
+<div class="p-4 border-b border-gray-200 dark:border-gray-700">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary dark:text-green-300 mt-1">accessibility_new</span>
+<div class="flex-1">
+<h3 class="font-bold text-text-light dark:text-text-dark">Accessibility</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark pt-1">We're committed to making our app usable for everyone.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex w-full items-center justify-between p-4 text-left border-b border-gray-200 dark:border-gray-700">
+<label class="font-medium text-text-light dark:text-text-dark" for="large-text">Large Text</label>
+<button aria-checked="false" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 dark:bg-gray-600 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark" id="large-text" role="switch">
+<span class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white dark:bg-gray-300 shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+<div class="flex w-full items-center justify-between p-4 text-left">
+<label class="font-medium text-text-light dark:text-text-dark" for="high-contrast">High Contrast Mode</label>
+<button aria-checked="true" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-primary transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark" id="high-contrast" role="switch">
+<span class="pointer-events-none inline-block h-5 w-5 transform translate-x-5 rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Support Card -->
+<div class="w-full overflow-hidden rounded-xl bg-white dark:bg-gray-800/50 shadow-sm">
+<button class="flex w-full items-center justify-between p-4 text-left">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary dark:text-green-300">feedback</span>
+<span class="font-medium text-secondary dark:text-green-300">Send Feedback &amp; Support</span>
+</div>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>
